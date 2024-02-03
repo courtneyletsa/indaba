@@ -24,13 +24,18 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-           Image.asset("assets/images/woman.jpg", fit: BoxFit.cover,),
+           Expanded(
+            
+            child: AspectRatio(
+              aspectRatio: 12/9,
+              
+              child: Image.asset("assets/images/woman.jpg", fit: BoxFit.cover,))),
           
           Divider(
             thickness: 3.0,
           ),
           Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: const EdgeInsets.all(16.0),
             child: Text("GET THE LATEST NEWS \n EASILY WITH US", style: TextStyle(
               decoration: TextDecoration.none, 
               fontSize: 26, 
@@ -41,7 +46,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               
           ),
           Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: const EdgeInsets.all(16.0),
             child: Text("Keep yourself updated with daily news reports.\nRead all types of news with us", style: TextStyle(
               color: Colors.grey,
               fontSize: 20,
@@ -51,7 +56,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20),
+            padding: const EdgeInsets.symmetric(vertical: 5),
             child: Divider(
               thickness: 3.0,
             ),
